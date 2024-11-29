@@ -22,14 +22,14 @@ namespace Assignment
         switch(iInput){
             case 1:
             {
-                Assignment47 assignement47 = new Assignment47();
-                assignement47.w47tAssignment();
+                AssignmentW47 assignementW47 = new AssignmentW47();
+                assignementW47.w47tAssignment();
                 break;
             }
             default:
             {
-                Assignment48 assignement48 = new Assignment48();
-                assignement48.w48Assignment();
+                AssignmentW48 assignementW48 = new AssignmentW48();
+                assignementW48.w48Assignment();
                 break;
             }
         }
