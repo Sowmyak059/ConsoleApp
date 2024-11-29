@@ -52,9 +52,8 @@ To run this project locally, follow these steps:
 
 ## **Learning Outcomes**
 Through this project, I learned:
-- **[Skill 1]**: A brief description of the skill or concept, e.g., "Understanding classes, inheritance, and polymorphism."
-- **[Skill 2]**: e.g., "Building REST APIs with ASP.NET Core."
-- **[Skill 3]**: e.g., "How to implement unit testing with xUnit."
+- **[SKill 1]**: Understanding classes, inheritance and polymorphism
+- **[Skill 2]**: Building Console application with C# core concepts.
 
 ## **Next Steps**
 Improvements and extensions for the project:
@@ -66,4 +65,3 @@ Feel free to fork this repository and open a pull request for any suggestions.
 
 ## **License**
 This project is open sourced, licensed is not required.
-learning projects and is easy to expand as the project grows. Let me know if you'd like specific sections customized further!
