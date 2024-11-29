@@ -1,4 +1,4 @@
-﻿/*internal class Program
+﻿/internal class Program
 {
     private static void Main(string[] args)
     {
@@ -20,7 +20,7 @@
 
     }
 }
-*/
+
 
 //Date : 19-11-2024 (Strings and String Methods)
 /*
