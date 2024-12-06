@@ -24,6 +24,9 @@ namespace Assignment
         List<ItemInfo> productDetails = new List<ItemInfo>();
         public void w48Assignment()
         {
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.WriteLine(" --------  Welcome to Product Tracking Application (W48)-------- ");
+            Console.ResetColor();
             String strInputValue = "P";
             do
             {
