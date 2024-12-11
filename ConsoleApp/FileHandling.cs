@@ -1,54 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-
-namespace MainProject;
-
-public class FileHandling
+﻿using MoneyTrackingApp;
+public static class FileManager
 {
-    //Methods for writing to and reading from files.The files will be saved in the current directory.
-    public string FileName { get; set; }
-    public string Dir { get; set; }
-    public FileHandling(string fileName)
-    {
-        FileName = fileName;
-        Dir=Directory.GetCurrentDirectory();
-    }  
-    public void SaveToFile(List<string> linesToSave)
-    {//wrinting strings to a file
-        string path = Path.Combine(Dir, FileName);
-        FileInfo fileInfo = new FileInfo(path);
-        //delete the file if it exists
-        if (fileInfo.Exists) 
-        {
-            fileInfo.Delete();
-        }
-        //Creates a new file and writes to it
-        using (StreamWriter sw = fileInfo.CreateText())
-        {
-            foreach (string line in linesToSave)
-            {
-                sw.WriteLine(line);
-            }
-            sw.Close();
-        }
-    }
-    public List<string> LoadData()
-    {
-        Console.WriteLine("LoadData");
-        string line = string.Empty;
-        List<string> lines= new List<string>();
-        if (!File.Exists(FileName)) return lines;
+    private static string filePath = "money_data.txt";
 
-        using (StreamReader reader = new StreamReader(FileName))
+    public static List<TransactionInfo> LoadItems()
+    {
+        var items = new List<TransactionInfo>();
+        if (File.Exists(filePath))
         {
-            while ((line = reader.ReadLine()) is not null)
+            var lines = File.ReadAllLines(filePath);
+            foreach (var line in lines)
             {
-                var parts = line.Split('|');
-                lines.Add(line);
+                items.Add(TransactionInfo.FromString(line));
             }
         }
-        return lines;
+        return items;
+    }
+
+    public static void SaveItems(List<TransactionInfo> items)
+    {
+        var lines = new List<string>();
+        foreach (var item in items)
+        {
+            lines.Add(item.ToString());
+        }
+        File.WriteAllLines(filePath, lines);
     }
 }

@@ -39,13 +39,13 @@ namespace Assignment
         List<AssetsInfo> assetsDetails = new List<AssetsInfo>();
         public void w49Assignment()
         {
-            LiveCurrency.FetchRates();
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
             Console.WriteLine("\n --------  Welcome to Asset Managment Application (W49)-------- ");
             Console.ResetColor();
             String strInputValue = "P";
             do
             {
+                LiveCurrency.FetchRates();
                 switch (strInputValue.ToUpper())
                 {
                     case "P":
