@@ -24,6 +24,7 @@ namespace MoneyTrackingApp
 
             while (true)
             {
+                Console.Clear();
                 Console.WriteLine("Welcome to Console based Sowmya's Money tracking application");
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
                 Console.WriteLine($"You have currently \' {balance} \' kr on your account\n");
