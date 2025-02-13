@@ -41,8 +41,8 @@ namespace Assignment
                 }
 
                 Console.ForegroundColor = ConsoleColor.Blue;  Console.WriteLine("\nPlease provide Which action you want perform"); Console.ResetColor();
-                Console.WriteLine("\"A\" - Add new product   |  \"S\" - Sort products  | \"D\" -To Delete | \"U\" - To update | | \"P\" - To see the products");
-                Console.ForegroundColor = ConsoleColor.DarkCyan;
+                Console.WriteLine("\"A\" - Add new product   |  \"S\" - Sort products  | \"D\" -To Delete | \"U\" - To update | \"P\" - To see the products");
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("\"Q\" - Quit & See the assets");
                 strInputValue = Console.ReadLine().Trim();
                 Console.ResetColor();
